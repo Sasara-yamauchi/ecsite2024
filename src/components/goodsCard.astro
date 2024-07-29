@@ -1,13 +1,21 @@
 ---
-const { href, title, body, thumbnail, price } = Astro.props;
-// console.log("card", Astro.props);
+const { href, title, body, thumbnail, price, state } = Astro.props;
+//console.log("card", Astro.props);
 ---
 
-<article>
+<link
+  href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+  rel="stylesheet"
+/>
+
+<article class="goods_card maru">
   <a href={href}>
-    <h2>{title}</h2>
-    <img src=`/images/${thumbnail}` alt={title} />
+    <img class="thumbnail" src=`/19_ecsite/images/${thumbnail}` alt={title} />
+
+    <p class="state">{state}</p>
+
+    <h2 class="goods_title">{title}</h2>
     <p>{body}</p>
-    <p>{price}</p>
+    <p class="price">{price}</p>
   </a>
 </article>

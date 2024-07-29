@@ -2,14 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Goodscard from '../components/goodsCard.astro';
 import { getCollection } from 'astro:content';
+import FirstView from "../components/firstView.astro";
 const workPages = await getCollection('goods');
 console.log(workPages);
 ---
 
 <Layout>
+
 <main>
+    <FirstView />
+    <h2 class="top maru">商品一覧</h2>
   <div class="flex">
-  {workPages.map(productPage => (<Goodscard title={productPage.data.title} href=`/goods/${productPage.slug}` thumbnail={productPage.data.thumbnail} body={productPage.data.description} price={productPage.data.price}/>
+  {workPages.map(productPage => (<Goodscard title={productPage.data.title} href=`/19_ecsite/goods/${productPage.slug}` thumbnail={productPage.data.thumbnail} body={productPage.data.description} price={productPage.data.price} state={productPage.data.state}/>
 ))}
 </div>
 </main>

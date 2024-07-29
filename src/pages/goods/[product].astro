@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 
 import goods from "../../data/goods.json";
+
 export const getStaticPaths = async () => {
   return goods.map(({ url }) => {
     return {
@@ -15,6 +16,6 @@ const goodsData = goods.find(({ url }) => product === url);
 
 <Layout>
   <p>{goodsData.name}</p>
-  <p>{goodsData.price}</p>3
-  <img src=`/images/${goodsData.itemphotos[0]}` />
+  <p>{goodsData.price}</p>
+  <img src=`/19_ecsite/images/${goodsData.itemphotos[0]}` />
 </Layout>

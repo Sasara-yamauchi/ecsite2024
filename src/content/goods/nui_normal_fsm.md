@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/goodsLayout.astro
 title: 【にじぱぺっとシリーズ vol.1】伏見ガク
-text: 世界中から厳選したイカと、日本近海で獲れたタラのすり身を主に使用した魚肉シートを食べやすい一口サイズにカットし、秘伝の調味でさっぱりとした酢味に仕上げました。
-thumbnail: yochan01.jpg
-price: 150050,
-state: false,
+text: 人気の「にじぱぺっと」シリーズから新たにが伏見ガクが登場。カバンに下げても、指につけても可愛い！お出かけのお供に是非！また、「にじぱぺっと」はにじさんじオフィシャルストアにて販売している「にじぱぺっとグッズ」の、にじぱぺポーチやポンチョとあわせてもお楽しみいただけます。
+thumbnail: gk.JPG
+price: ¥1,500
+state: false
 id: 4710158-2
 colors: 赤色
 maker: ANYCOLOR株式会社
 ---
 
-![よっちゃんイカ](/images/yochan01.jpg)
+![にじぱぺっと 伏見ガク](/19_ecsite/images/gk.JPG)

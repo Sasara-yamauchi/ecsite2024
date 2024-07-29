@@ -1,6 +1,7 @@
 ---
 import Head from "../components/head.astro";
 import Header from "../components/header.astro";
+
 import Footer from "../components/footer.astro";
 import "../assets/styles/style.scss";
 ---
@@ -9,7 +10,44 @@ import "../assets/styles/style.scss";
   <Head />
   <body>
     <Header />
+
     <slot />
+
+    <div class="button-container maru">
+      <button class="load-more">more</button>
+    </div>
+
     <Footer />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var loadMoreButton = document.querySelector(".load-more");
+        var cards = document.querySelectorAll(".card");
+
+        // 最初に表示する6つのカードを展開状態にする
+        cards.forEach(function (card, index) {
+          if (index >= 4) {
+            card.classList.remove("expanded");
+          } else {
+            card.classList.add("expanded");
+          }
+        });
+
+        // ボタンをクリックしたときの処理
+        loadMoreButton.addEventListener("click", function () {
+          cards.forEach(function (card, index) {
+            if (index >= 4) {
+              card.classList.toggle("expanded");
+            }
+          });
+
+          // ボタンのテキストを切り替える
+          if (loadMoreButton.textContent === "more") {
+            loadMoreButton.textContent = "down";
+          } else {
+            loadMoreButton.textContent = "more";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
